@@ -1,0 +1,7 @@
+{
+  "name": "UAE-Homes",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
