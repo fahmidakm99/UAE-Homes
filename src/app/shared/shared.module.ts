@@ -5,6 +5,7 @@ import { PropertyCardComponent } from '../property-card/property-card.component'
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RouterModule } from '@angular/router';
     PropertyCardComponent, // Export it so Home and Favorite can see it
     CommonModule,
     IonicModule,
-     HeaderComponent, FooterComponent
+     HeaderComponent, FooterComponent,
+     TranslateModule
   ]
 })
 export class SharedModule {}

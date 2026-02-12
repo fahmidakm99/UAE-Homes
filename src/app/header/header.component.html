@@ -2,10 +2,10 @@
   <ion-toolbar class="custom-header">
 
     <!-- Left: Logo -->
-<ion-title class="header-title" routerLink="/home">
-  <img src="assets/icon/UAE-Homes-icon.png" class="logo-img" />
-  <span class="logo-text">UAE Homes</span>
-</ion-title>
+    <ion-title class="header-title" routerLink="/home">
+      <img src="assets/icon/UAE-Homes-icon.png" class="logo-img" />
+      <span class="logo-text">UAE Homes</span>
+    </ion-title>
 
 
     <!-- Right: Actions -->
@@ -33,13 +33,24 @@
         <ion-icon name="person-outline"></ion-icon>
         <span class="hide-md">Sign In</span>
       </ion-button>
-
+<!-- 
       <ion-button class="hide-md list-property-btn" routerLink="/home">
         List Property
+      </ion-button> -->
+     <!-- Theme switch -->
+    <ion-button fill="clear" (click)="toggleTheme()">
+      <ion-icon
+        [name]="themeService.isDarkMode() ? 'sunny-outline' : 'moon-outline'"
+      ></ion-icon>
+    </ion-button>
+
+      <ion-button fill="clear" size="small" (click)="toggleLanguage()" class="lang-btn">
+        {{ currentLang === 'en' ? 'العربية' : 'English' }}
       </ion-button>
+
     </ion-buttons>
 
-  <!-- Mobile Menu Toggle -->
+    <!-- Mobile Menu Toggle -->
     <!-- <ion-buttons slot="end" class="mobile-menu hide-sm">
       <ion-menu-button autoHide="false"></ion-menu-button>
     </ion-buttons> -->

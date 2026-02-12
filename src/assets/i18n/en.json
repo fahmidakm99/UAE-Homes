@@ -1,0 +1,17 @@
+{
+  "HOME": {
+    "TITLE": "Welcome to UAE Homes",
+    "DESCRIPTION": "Find your perfect property"
+  },
+  "CONTACT": {
+    "TITLE": "Contact Us",
+    "MESSAGE": "Send us a message"
+  },
+
+  "HEADER": {
+    "FEATURES": "Features",
+    "PLANS": "Plans",
+    "ABOUT": "About",
+    "CONTACT": "Contact"
+  }
+}

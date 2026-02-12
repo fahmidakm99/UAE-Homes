@@ -10,6 +10,7 @@ import { PropertyCardComponent } from './property-card/property-card.component';
 import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [AppComponent,
@@ -20,8 +21,9 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     SharedModule,
     HttpClientModule,
+      TranslateModule.forRoot(),
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy,  }],
   bootstrap: [AppComponent],
   // exports: [PropertyCardComponent]
   
