@@ -1,0 +1,59 @@
+<div class="content">
+<ion-card (click)="onCardClick()" class="ion-activatable ripple-parent">
+  <div class="relative">
+    <ion-img [src]="property.image" [alt]="property.title"></ion-img>
+
+    <ion-button
+      fill="clear"
+      shape="round"
+      size="small"
+      class="favorite-btn"
+      (click)="toggleFavorite($event)"
+    >
+      <ion-icon
+        [name]="isFavorite ? 'heart' : 'heart-outline'"
+        [color]="isFavorite ? 'danger' : 'medium'">
+      </ion-icon>
+    </ion-button>
+
+    <ion-badge *ngIf="property.featured" color="primary" class="featured-badge">
+      Featured
+    </ion-badge>
+
+    <ion-badge
+      [color]="property.purpose === 'Sale' ? 'light' : 'dark'"
+      class="purpose-badge">
+      For {{ property.purpose }}
+    </ion-badge>
+  </div>
+
+  <ion-card-content>
+    <div class="price-type">
+      <h3>{{ formatPrice(property.price) }}</h3>
+      <ion-badge color="dark">{{ property.type }}</ion-badge>
+    </div>
+
+    <h4 class="title">{{ property.title }}</h4>
+
+    <div class="location">
+      <ion-icon name="location-outline"></ion-icon>
+      <span>{{ property.location }}, {{ property.city }}</span>
+    </div>
+
+    <div class="features">
+      <div>
+        <ion-icon name="bed-outline"></ion-icon>
+        <span>{{ property.bedrooms }}</span>
+      </div>
+      <div>
+        <ion-icon name="water-outline"></ion-icon>
+        <span>{{ property.bathrooms }}</span>
+      </div>
+      <div>
+        <ion-icon name="resize-outline"></ion-icon>
+        <span>{{ property.area | number }} sqft</span>
+      </div>
+    </div>
+  </ion-card-content>
+</ion-card>
+</div>

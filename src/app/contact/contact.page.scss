@@ -1,0 +1,49 @@
+.hero {
+  background: linear-gradient(to right, #2563eb, #1e3a8a);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-grid {
+  padding: 40px 20px;
+}
+
+.info-card {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.info-card .icon {
+  font-size: 28px;
+  color: #2563eb;
+}
+
+.map-placeholder {
+  background: #e5e7eb;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.bg-light {
+  background: #f4f6f9;
+}
+
+.submit-btn {
+  margin-top: 15px;
+}
+
+.faq-card {
+  margin-bottom: 15px;
+}

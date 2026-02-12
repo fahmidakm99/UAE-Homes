@@ -1,0 +1,75 @@
+.hero {
+  background: linear-gradient(to right, #2563eb, #1e3a8a);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.plans-section {
+  padding: 40px 20px;
+}
+
+ion-card {
+  position: relative;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.highlighted {
+  border: 2px solid #2563eb;
+  transform: scale(1.05);
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2563eb;
+  color: white;
+  padding: 4px 12px;
+  font-size: 12px;
+  border-radius: 12px;
+}
+
+.plan-header {
+  text-align: center;
+}
+
+.price {
+  margin: 10px 0 20px;
+}
+
+.amount {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.period {
+  color: gray;
+  margin-left: 4px;
+}
+
+.features {
+  margin-top: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.feature.disabled {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+
+.enterprise {
+  padding: 40px 20px;
+}
+
+.faq {
+  padding: 40px 20px;
+}

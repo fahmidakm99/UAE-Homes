@@ -1,0 +1,115 @@
+<ion-content>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>About UAE Homes</h1>
+    <p>
+      Leading the way in UAE real estate with innovation, integrity, and exceptional service
+    </p>
+  </div>
+
+  <!-- Our Story -->
+  <div class="section">
+    <ion-badge color="primary">Our Story</ion-badge>
+    <h2>Transforming Real Estate Since 2015</h2>
+    <p>
+      UAE Homes was founded with a simple mission: to make finding and securing
+      properties in the UAE easier, faster, and more transparent.
+    </p>
+    <p>
+      Today, we connect thousands of buyers, renters, and investors with their dream properties every month.
+    </p>
+
+    <!-- Stats -->
+    <ion-grid class="stats">
+      <ion-row>
+        <ion-col size="6" size-md="3" class="stat-box">
+          <h3>10K+</h3>
+          <p>Properties</p>
+        </ion-col>
+        <ion-col size="6" size-md="3" class="stat-box">
+          <h3>5K+</h3>
+          <p>Happy Clients</p>
+        </ion-col>
+        <ion-col size="6" size-md="3" class="stat-box">
+          <h3>50+</h3>
+          <p>Expert Agents</p>
+        </ion-col>
+        <ion-col size="6" size-md="3" class="stat-box">
+          <h3>9+</h3>
+          <p>Years Experience</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Values -->
+  <div class="section bg-light">
+    <ion-badge color="primary">Our Values</ion-badge>
+    <h2>What Drives Us</h2>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="6" size-lg="3" *ngFor="let value of values">
+          <ion-card>
+            <ion-card-content>
+              <h3>{{ value.title }}</h3>
+              <p>{{ value.description }}</p>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Testimonials -->
+  <div class="section">
+    <ion-badge color="primary">Testimonials</ion-badge>
+    <h2>What Our Clients Say</h2>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" size-md="4" *ngFor="let t of testimonials">
+          <ion-card>
+            <ion-card-content>
+
+              <ion-icon name="chatbubble-ellipses" color="primary" size="large"></ion-icon>
+
+              <p class="testimonial-text">"{{ t.content }}"</p>
+
+              <div class="testimonial-user">
+                <img [src]="t.image" alt="{{ t.name }}" />
+                <div>
+                  <strong>{{ t.name }}</strong>
+                  <p>{{ t.role }}</p>
+                </div>
+              </div>
+
+              <div class="stars">
+                <ion-icon 
+                  name="star" 
+                  color="warning" 
+                  *ngFor="let star of [].constructor(t.rating)">
+                </ion-icon>
+              </div>
+
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- Team Section -->
+  <div class="section bg-light">
+    <ion-badge color="primary">Our Team</ion-badge>
+    <h2>Meet the Experts</h2>
+    <p>
+      Our team of dedicated professionals is committed to helping you find your perfect property.
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <app-footer></app-footer>
+
+</ion-content>

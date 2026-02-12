@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Filters</ion-title>
+    <ion-buttons slot="end">
+      <ion-button fill="clear" (click)="closeModal()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="filter-card">
+    <label>City</label>
+    <select [value]="filters.city" (change)="updateFilter('city', $any($event.target).value)">
+      <option value="all">All Cities</option>
+      <option value="Dubai">Dubai</option>
+      <option value="Abu Dhabi">Abu Dhabi</option>
+      <option value="Sharjah">Sharjah</option>
+      <option value="Ajman">Ajman</option>
+      <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+    </select>
+
+    <label>Property Type</label>
+    <select [value]="filters.type" (change)="updateFilter('type', $any($event.target).value)">
+      <option value="all">All Types</option>
+      <option value="Apartment">Apartment</option>
+      <option value="Villa">Villa</option>
+      <option value="Penthouse">Penthouse</option>
+      <option value="Townhouse">Townhouse</option>
+    </select>
+
+    <label>Purpose</label>
+    <select [value]="filters.purpose" (change)="updateFilter('purpose', $any($event.target).value)">
+      <option value="all">All</option>
+      <option value="Sale">For Sale</option>
+      <option value="Rent">For Rent</option>
+    </select>
+
+    <label>Bedrooms</label>
+    <select [value]="filters.bedrooms" (change)="updateFilter('bedrooms', $any($event.target).value)">
+      <option value="all">Any</option>
+      <option value="1">1 Bedroom</option>
+      <option value="2">2 Bedrooms</option>
+      <option value="3">3 Bedrooms</option>
+      <option value="4">4+ Bedrooms</option>
+    </select>
+
+    <ion-button expand="block" (click)="applyFilters()">Apply Filters</ion-button>
+    <ion-button expand="block" fill="clear" color="medium" (click)="resetFilters()">Reset Filters</ion-button>
+  </div>
+</ion-content>

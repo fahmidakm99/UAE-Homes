@@ -1,0 +1,48 @@
+<!-- <ion-modal [isOpen]="!!selectedProperty" (ionModalDidDismiss)="closeDetails()"> -->
+<ng-container *ngIf="property">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>{{ property.title }}</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="closeModal()">Close</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding property-modal">
+    <ion-img [src]="property.image"></ion-img>
+
+    <ion-badge *ngIf="property.featured">Featured</ion-badge>
+    <ion-badge>For {{ property.purpose }}</ion-badge>
+
+    <div>
+      <ion-icon name="location-outline"></ion-icon>
+      {{ property.location }}, {{ property.city }}
+    </div>
+
+    <div class="features">
+      <div>
+        <ion-icon name="bed-outline"></ion-icon><br>{{ property.bedrooms }}<br> Bedrooms
+      </div>
+      <div><ion-icon name="water-outline"></ion-icon><br>{{ property.bathrooms }} <br>Bathrooms</div>
+
+      <div><ion-icon name="resize-outline"></ion-icon><br>{{ property.area | number }}<br> Sqft</div>
+      <div><ion-icon name="home-outline"></ion-icon><br>{{ property.type | number }} <br>Property Type</div>
+    </div>
+
+    <h5>Description</h5>
+    <p>{{ property.description }}</p>
+    <h5>Amenities</h5>
+
+    <div class="amenities-grid">
+      <div class="amenity" *ngFor="let amenity of property.amenities">
+        • {{ amenity }}<br>
+      </div>
+    </div>
+
+    <ion-button expand="block">
+      <ion-icon slot="start" name="call-outline"></ion-icon>Call Agent
+    </ion-button>
+  </ion-content>
+</ng-container>
+<!-- </ion-modal> -->

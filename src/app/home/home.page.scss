@@ -25,3 +25,61 @@
 #container a {
   text-decoration: none;
 }
+.segment{
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.hero {
+  background: linear-gradient(90deg, #2563eb, #1e40af); // blue-600 → blue-800
+  color: #ffffff;
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: #dbeafe; // blue-100
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  .hero {
+    padding: 5rem 2rem;
+  }
+
+  .hero h2 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.4rem;
+  }
+}
+.pagination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  
+  .page-info {
+    font-size: 14px;
+    color: var(--ion-color-medium);
+    
+    strong {
+      color: var(--ion-color-dark);
+    }
+  }
+
+  ion-button {
+    --padding-start: 8px;
+    --padding-end: 8px;
+  }
+}

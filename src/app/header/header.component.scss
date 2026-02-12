@@ -1,0 +1,91 @@
+/* Sticky header like Tailwind */
+ion-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Toolbar */
+.custom-header {
+  --background: #ffffff;
+  --min-height: 64px;
+  padding: 0 16px;
+  border-bottom: 1px solid #e5e7eb; /* border-b */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* shadow-sm */
+}
+
+/* Logo container */
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px; /* text-2xl */
+  font-weight: 700;
+  color: #111827;
+}
+
+/* Logo icon */
+.logo-icon {
+  font-size: 32px; /* h-8 w-8 */
+  color: #2563eb; /* blue-600 */
+}
+
+/* Right-side buttons */
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* gap-4 */
+}
+
+/* Button icons */
+ion-button ion-icon {
+  font-size: 20px; /* h-5 w-5 */
+}
+
+/* Button text */
+ion-button span {
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.icon-style{
+    color: #111827;
+}
+/* Primary button */
+.list-property-btn {
+  --background: #111827;
+  --color: #ffffff;
+  --border-radius: 6px;
+  height: 32px;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* Mobile responsiveness */
+.hide-md {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-md {
+    display: inline;
+  }
+}
+/* Show/hide menus based on screen size */
+// .desktop-menu {
+//   display: flex;
+// }
+
+// .mobile-menu {
+//   display: none;
+// }
+
+// @media (max-width: 768px) {
+//   .desktop-menu {
+//     display: none !important;
+//   }
+//   .mobile-menu {
+//     display: flex !important;
+//   }
+// }

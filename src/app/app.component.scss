@@ -1,0 +1,13 @@
+// /* global.scss */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; // Takes full height of ion-content
+}
+
+// ion-router-outlet {
+//   flex: 1; // Pushes the footer down
+//   display: block;
+//   position: relative !important; // Overrides Ionic's absolute positioning
+// }
+

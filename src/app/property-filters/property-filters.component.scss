@@ -1,0 +1,76 @@
+.searchbar-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px;
+
+  .searchbar {
+    position: relative;
+    flex: 1;
+
+    input {
+      width: 100%;
+      height: 48px;
+      padding: 0 16px 0 44px;
+      border-radius: 12px;
+      font-size: 15px;
+      outline: none;
+      border: 1px solid #e5e7eb;
+      background: #ffffff;
+      transition: all 0.2s ease;
+
+      &:focus {
+        border-color: #3880ff;
+        box-shadow: 0 0 0 3px rgba(56, 128, 255, 0.1);
+      }
+
+      &::placeholder {
+        color: #9ca3af;
+      }
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: #9ca3af;
+    }
+  }
+
+  .filter-btn {
+    --border-radius: 12px;
+    height: 48px;
+    margin: 0;
+  }
+}
+
+// Modal Styles
+.filter-container {
+  ion-list {
+    margin-bottom: 24px;
+    background: transparent;
+  }
+
+  ion-item {
+    --padding-start: 8px;
+    --inner-padding-end: 8px;
+    margin-bottom: 8px;
+    
+    // Customizing the select modern style
+    ion-select {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+.button-group {
+  padding: 0 8px;
+  
+  .apply-btn {
+    --border-radius: 10px;
+    margin-bottom: 8px;
+  }
+}

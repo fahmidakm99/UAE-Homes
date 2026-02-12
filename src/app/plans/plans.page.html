@@ -1,0 +1,122 @@
+<ion-content>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Choose Your Plan</h1>
+    <p>Select the perfect plan for your property search needs</p>
+  </div>
+
+  <!-- Plans -->
+  <ion-grid class="plans-section">
+    <ion-row>
+      <ion-col size="12" size-md="4" *ngFor="let plan of plans">
+
+        <ion-card [class.highlighted]="plan.highlighted">
+
+          <div *ngIf="plan.highlighted" class="badge">
+            Most Popular
+          </div>
+
+          <ion-card-content>
+
+            <div class="plan-header">
+              <h2>{{ plan.name }}</h2>
+              <p class="description">{{ plan.description }}</p>
+
+              <div class="price">
+                <span class="amount">{{ plan.price }}</span>
+                <span class="period">{{ plan.period }}</span>
+              </div>
+
+              <ion-button 
+                expand="block" 
+                [color]="plan.highlighted ? 'primary' : 'medium'">
+                {{ plan.price === 'Free' ? 'Get Started' : 'Subscribe Now' }}
+              </ion-button>
+            </div>
+
+            <div class="features">
+              <div *ngFor="let feature of plan.features" class="feature">
+                <ion-icon name="checkmark-circle" color="success"></ion-icon>
+                <span>{{ feature }}</span>
+              </div>
+
+              <div *ngFor="let feature of plan.notIncluded" class="feature disabled">
+                <ion-icon name="close-circle"></ion-icon>
+                <span>{{ feature }}</span>
+              </div>
+            </div>
+
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Enterprise Section -->
+  <div class="enterprise">
+    <ion-card>
+      <ion-card-content>
+        <h2>Enterprise</h2>
+        <p>Custom solutions for large organizations and agencies.</p>
+
+        <ul>
+          <li>✔ Unlimited team members</li>
+          <li>✔ Custom integrations</li>
+          <li>✔ Dedicated infrastructure</li>
+          <li>✔ SLA guarantees</li>
+        </ul>
+
+        <ion-button size="large">Contact Sales</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- FAQ Section -->
+  <div class="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <ion-accordion-group>
+      <ion-accordion value="1">
+        <ion-item slot="header">
+          <ion-label>Can I switch plans at any time?</ion-label>
+        </ion-item>
+        <div slot="content" class="ion-padding">
+          Yes! You can upgrade or downgrade anytime.
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="2">
+        <ion-item slot="header">
+          <ion-label>What payment methods do you accept?</ion-label>
+        </ion-item>
+        <div slot="content" class="ion-padding">
+          We accept major credit and debit cards.
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="3">
+        <ion-item slot="header">
+          <ion-label>Is there a free trial?</ion-label>
+        </ion-item>
+        <div slot="content" class="ion-padding">
+          Premium plans include a 14-day free trial.
+        </div>
+      </ion-accordion>
+
+      <ion-accordion value="4">
+        <ion-item slot="header">
+          <ion-label>Can I cancel anytime?</ion-label>
+        </ion-item>
+        <div slot="content" class="ion-padding">
+          Yes, cancel anytime before billing renewal.
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </div>
+
+  <!-- Footer -->
+  <app-footer></app-footer>
+
+</ion-content>

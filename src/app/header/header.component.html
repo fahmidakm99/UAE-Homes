@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar class="custom-header">
+
+    <!-- Left: Logo -->
+    <ion-title class="header-title" routerLink="/home">
+      <ion-icon name="business-outline" class="logo-icon"></ion-icon>
+      UAE Homes
+    </ion-title>
+
+    <!-- Right: Actions -->
+    <ion-buttons slot="end" class="action-buttons">
+
+      <ion-button fill="clear" class="icon-style" routerLink="/features">
+        <a><span class="hide-md">Features</span></a>
+      </ion-button>
+      <ion-button fill="clear" class="icon-style" routerLink="/plans">
+        <a><span class="hide-md">Plans</span></a>
+      </ion-button>
+      <ion-button fill="clear" class="icon-style" routerLink="/about">
+        <a><span class="hide-md">About</span></a>
+      </ion-button>
+      <ion-button fill="clear" class="icon-style" routerLink="/contact">
+        <a><span class="hide-md">Contact</span></a>
+      </ion-button>
+
+      <ion-button fill="clear" class="icon-style" routerLink="/favorite">
+        <ion-icon name="heart-outline"></ion-icon>
+        <span class="hide-md">Favorites</span>
+      </ion-button>
+
+      <ion-button fill="clear" class="icon-style">
+        <ion-icon name="person-outline"></ion-icon>
+        <span class="hide-md">Sign In</span>
+      </ion-button>
+
+      <ion-button class="hide-md list-property-btn" routerLink="/home">
+        List Property
+      </ion-button>
+    </ion-buttons>
+
+  <!-- Mobile Menu Toggle -->
+    <!-- <ion-buttons slot="end" class="mobile-menu hide-sm">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons> -->
+
+  </ion-toolbar>
+</ion-header>
+
+<!-- Side Menu for Mobile -->
+<!-- <ion-menu side="start" menuId="mobile-menu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>UAE Homes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/home" lines="none">Home</ion-item>
+      <ion-item routerLink="/features" lines="none">Features</ion-item>
+      <ion-item routerLink="/plans" lines="none">Plans</ion-item>
+      <ion-item routerLink="/about" lines="none">About</ion-item>
+      <ion-item routerLink="/contact" lines="none">Contact</ion-item>
+      <ion-item routerLink="/favorite" lines="none">Favorites</ion-item>
+      <ion-item>Sign In</ion-item>
+      <ion-item routerLink="/home">List Property</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu> -->

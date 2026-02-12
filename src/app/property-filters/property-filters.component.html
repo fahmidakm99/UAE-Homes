@@ -1,0 +1,93 @@
+<div class="searchbar-container">
+  <div class="searchbar">
+    <ion-icon name="search-outline" class="search-icon"></ion-icon>
+    <input
+      type="text"
+      placeholder="Search by location..."
+      [value]="filters.searchQuery"
+      (input)="updateFilter('searchQuery', $any($event.target).value)"
+    />
+  </div>
+
+  <ion-button class="filter-btn" (click)="openFilterModal()" fill="outline">
+    <ion-icon name="options-outline" slot="icon-only"></ion-icon>
+  </ion-button>
+</div>
+
+<ion-modal [isOpen]="isFilterModalOpen" (didDismiss)="closeFilterModal()">
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-title>Filters</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="closeFilterModal()">
+          <ion-icon name="close-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <div class="filter-container">
+      <ion-list lines="inset">
+        <ion-item>
+          <ion-select
+            label="City"
+            label-placement="stacked"
+            [value]="filters.city"
+            (ionChange)="updateFilter('city', $event.detail.value)">
+            <ion-select-option value="all">All Cities</ion-select-option>
+            <ion-select-option value="Dubai">Dubai</ion-select-option>
+            <ion-select-option value="Abu Dhabi">Abu Dhabi</ion-select-option>
+            <ion-select-option value="Sharjah">Sharjah</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-select
+            label="Property Type"
+            label-placement="stacked"
+            [value]="filters.type"
+            (ionChange)="updateFilter('type', $event.detail.value)">
+            <ion-select-option value="all">All Types</ion-select-option>
+            <ion-select-option value="Apartment">Apartment</ion-select-option>
+            <ion-select-option value="Villa">Villa</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-select
+            label="Purpose"
+            label-placement="stacked"
+            [value]="filters.purpose"
+            (ionChange)="updateFilter('purpose', $event.detail.value)">
+            <ion-select-option value="all">All</ion-select-option>
+            <ion-select-option value="Sale">For Sale</ion-select-option>
+            <ion-select-option value="Rent">For Rent</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-select
+            label="Bedrooms"
+            label-placement="stacked"
+            [value]="filters.bedrooms"
+            (ionChange)="updateFilter('bedrooms', $event.detail.value)">
+            <ion-select-option value="all">Any</ion-select-option>
+            <ion-select-option value="1">1 Bedroom</ion-select-option>
+            <ion-select-option value="2">2 Bedrooms</ion-select-option>
+            <ion-select-option value="3">3 Bedrooms</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-list>
+
+      <div class="button-group">
+        <ion-button expand="block" class="apply-btn" (click)="closeFilterModal()">
+          Apply Filters
+        </ion-button>
+        <ion-button expand="block" fill="clear" color="medium" (click)="resetFilters()">
+          Reset Filters
+        </ion-button>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal>

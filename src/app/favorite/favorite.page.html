@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div *ngIf="(favorites$ | async)?.length === 0" class="empty-state">
+    <ion-icon name="heart-dislike-outline"></ion-icon>
+    <h2>No Favorites Yet</h2>
+    <p>Tap the heart icon on any property to save it here.</p>
+    <ion-button routerLink="/" fill="clear">Browse Properties</ion-button>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" size-md="4" size-lg="3" *ngFor="let property of (favorites$ | async)">
+        <app-property-card 
+          [property]="property"
+          (cardSelected)="openDetails($event)">
+        </app-property-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <app-footer></app-footer>
+</ion-content>

@@ -11,6 +11,30 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'property-details',
+    loadChildren: () => import('./property-details/property-details.module').then( m => m.PropertyDetailsPageModule)
+  },
+  {
+    path: 'favorite',
+    loadChildren: () => import('./favorite/favorite.module').then( m => m.FavoritePageModule)
+  },
+  {
+    path: 'features',
+    loadChildren: () => import('./features/features.module').then( m => m.FeaturesPageModule)
+  },
+  {
+    path: 'plans',
+    loadChildren: () => import('./plans/plans.module').then( m => m.PlansPageModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
+  },
+  {
+    path: 'about',
+    loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },
 ];
 
 @NgModule({

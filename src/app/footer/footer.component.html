@@ -1,0 +1,79 @@
+<ion-footer>
+  <ion-toolbar color="dark">
+    <ion-grid class="footer-container">
+
+      <ion-row>
+
+        <!-- Brand -->
+        <ion-col size="12" size-md="6" size-lg="3">
+          <div class="brand">
+            <ion-icon name="business-outline" class="brand-icon"></ion-icon>
+            <h3>UAE Homes</h3>
+          </div>
+
+          <p class="footer-text">
+            Your trusted partner in finding the perfect property in the United Arab Emirates.
+          </p>
+
+          <div class="social-icons">
+            <ion-icon name="logo-facebook"></ion-icon>
+            <ion-icon name="logo-twitter"></ion-icon>
+            <ion-icon name="logo-instagram"></ion-icon>
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </div>
+        </ion-col>
+
+        <!-- Quick Links -->
+        <ion-col size="12" size-md="6" size-lg="3">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a routerLink="/">Properties</a></li>
+            <li><a routerLink="/features">Features</a></li>
+            <li><a routerLink="/plans">Plans & Pricing</a></li>
+            <li><a routerLink="/about">About Us</a></li>
+            <li><a routerLink="/contact">Contact</a></li>
+          </ul>
+        </ion-col>
+
+        <!-- Property Types -->
+        <ion-col size="12" size-md="6" size-lg="3">
+          <h4>Property Types</h4>
+          <ul>
+            <li><a routerLink="/properties" [queryParams]="{ type: 'apartment' }">Apartments</a></li>
+            <li><a routerLink="/properties" [queryParams]="{ type: 'villa' }">Villas</a></li>
+            <li><a routerLink="/properties" [queryParams]="{ type: 'penthouse' }">Penthouses</a></li>
+            <li><a routerLink="/properties" [queryParams]="{ type: 'townhouse' }">Townhouses</a></li>
+            <li><a routerLink="/properties" [queryParams]="{ type: 'commercial' }">Commercial</a></li>
+          </ul>
+        </ion-col>
+
+        <!-- Contact -->
+        <ion-col size="12" size-md="6" size-lg="3">
+          <h4>Contact Us</h4>
+          <ul class="contact-list">
+            <li>
+              <ion-icon name="location-outline"></ion-icon>
+              <span>Downtown Dubai, UAE</span>
+            </li>
+            <li>
+              <ion-icon name="call-outline"></ion-icon>
+              <span>+971 4 123 4567</span>
+            </li>
+            <li>
+              <ion-icon name="mail-outline"></ion-icon>
+              <span>info@uaehomes.com</span>
+            </li>
+          </ul>
+        </ion-col>
+
+      </ion-row>
+
+      <ion-row class="copyright">
+        <ion-col size="12" class="ion-text-center">
+          <p>&copy; {{ currentYear }} UAE Homes. All rights reserved.</p>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+  </ion-toolbar>
+</ion-footer>
