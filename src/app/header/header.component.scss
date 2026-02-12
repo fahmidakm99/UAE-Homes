@@ -4,6 +4,24 @@ ion-header {
   top: 0;
   z-index: 50;
 }
+.header-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 32px;   // default desktop size
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 600;
+}
 
 /* Toolbar */
 .custom-header {
